@@ -1,0 +1,139 @@
+<!-- Cards for employees -->
+
+<div class="col-lg-12 col-md-12 col-sm-12">
+    <div class="row employeeCollection">
+    <div class="col-lg-3 col-md-3 col-sm-6 employeeGrid">
+        <div class="employee-info">
+            <img src="assets/Employees/erling-150x150.jpg" alt="Employee 1">
+            <div class="employee-details">
+                <div><h3>John Doe</h3></div>
+                <div><p>Daglig leder</p></div>
+                <div><p>(+47) 12345678</p></div>
+                <div><p><a href="mailto: abc@kontek.no">abc@kontek.no</a></p></div>
+                <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
+            </div>    
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-6 employeeGrid">
+        <div class="employee-info">
+            <img src="assets/Employees/christer-150x150.jpg" alt="Employee 2">
+            <div class="employee-details">
+                <div><h3>Thomas Tho</h3></div>
+                <div><p>Byggingeniør</p></div>
+                <div><p>(+47) 87654321</p></div>
+                <div><p><a href="mailto: def@kontek.no">def@kontek.no</a></p></div>
+                <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
+            </div>
+        </div>
+        </div>
+    <div class="col-lg-3 col-md-3 col-sm-6 employeeGrid">
+        <div class="employee-info">
+            <img src="/assets/Employees/Johnny-H.-Solhaug-150x150.jpg" alt="Employee 3">
+            <div class="employee-details">
+                <div><h3>Helen Cho</h3></div>
+                <div><p>Job Title</p></div>
+                <div><p>Phone Number</p></div>
+                <div><p>Email</p></div>
+                <div><p>Descriptive text about the employee</p></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-6 employeeGrid">
+        <div class="employee-info">
+            <img src="employee4.jpg" alt="Employee 4">
+            <div class="employee-details">
+                <div><h3>Anita Moo</h3></div>
+                <div><p>Job Title</p></div>
+                <div><p>Phone Number</p></div>
+                <div><p>Email</p></div>
+                <div><p>Descriptive text about the employee</p></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-6 employeeGrid">
+        <div class="employee-info">
+            <img src="employee5.jpg" alt="Employee 5">
+            <div class="employee-details">
+                <div><h3>John Johnson</h3></div>
+                <div><p>Job Title</p></div>
+                <div><p>Phone Number</p></div>
+                <div><p>Email</p></div>
+                <div><p>Descriptive text about the employee</p></div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+<!-- Handlebars Project -->
+<script id="project-template" type="text/x-handlebars-template">
+    <div class="container">
+        <div class="row projectCenter">
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">{{projectName}}</h5>
+                <p class="card-text">Byggherre: {{constructionClient}}</p>
+                <p class="card-text">Vår oppdragsgiver: {{employer}}</p>
+                <p class="card-text">Arkitekt: {{architect}}</p>
+                <p class="card-text">Størrelse: {{size}}</p>
+                <p class="card-text">Ferdigstillelse: {{year}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div id="carouselCrossfade" class="carousel slide carousel-fade pointer-event" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                {{#each carouselImages}}
+                  <button type="button" data-bs-target="#carouselCrossfade" data-bs-slide-to="{{@index}}" class="{{#if @first}}active{{/if}}" aria-current="true" aria-label="Slide {{@index}}"></button>
+                {{/each}}
+              </div>
+              <div class="carousel-inner">
+                {{#each carouselImages}}
+                  <!-- <div class="slideshow"> -->
+                    <div class="carousel-item {{#if @first}}active{{/if}}">
+                      <img src="{{this}}" class="d-block w-100" alt="Image {{@index}}">
+                    <!-- </div> -->
+                  </div>
+                {{/each}}
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselCrossfade" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselCrossfade" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+</script>
+
+<!-- Copy to head -->  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+
+<!-- Copy to own JS-file -->
+function renderProject(data) {
+    const templateSource = document.getElementById('project-template').innerHTML;
+    const template = Handlebars.compile(templateSource);
+    const renderedHtml = template(data);
+    document.getElementById('projects-container').innerHTML += renderedHtml;
+  }
+
+  const projectData = {
+    projectName: 'Prosjektnavn',
+    constructionClient: 'Example Construction Client',
+    employer: 'Example Employer',
+    architect: 'Example Architect',
+    size: '1000 sqm',
+    year: '2023',
+    carouselImages: [
+      'https://mdbcdn.b-cdn.net/img/new/slides/041.webp',
+      'https://mdbcdn.b-cdn.net/img/new/slides/042.webp',
+      'https://mdbcdn.b-cdn.net/img/new/slides/043.webp'
+    ]
+  };
+  
+  renderProject(projectData);

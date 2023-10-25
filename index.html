@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hjem • Konstruksjonsteknikk</title>
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/7696d9b917.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        
+        <div class="nav-container">
+        <nav class="navbar navbar-expand-md navbar-light sticky" id="navbar">
+            <div class="container-custom">
+                <a class="navbar-brand" href="/">
+                    <img src="assets\kontek-logo.png" alt="" width="100%" height="auto">
+                </a>
+                <div class="navbar-toggler" id="navbarToggler">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="button-container">
+                    <ul class="navbar-nav me-auto mb-0 mb-lg-0 pl-2 ms-auto nav-pills nav-fill">
+                        <li class="nav-item">
+                            <a class="nav-link active-nav-item" id="activeNavbar" aria-current="page" href=""><b>Hjem</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/services.html">Våre tjenester</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/references.html">Referanser</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about.html">Om Konstruksjonsteknikk</a>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+        
+        <main>
+            <div class="container body-container">
+            <div id="navCarousel" class="carousel slide mb-6" data-bs-ride="carousel" data-bs-theme="light" data-bs-interval="111111000">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#navCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Prosjekter"></button>
+                    <button type="button" data-bs-target="#navCarousel" data-bs-slide-to="1" aria-label="Om oss"></button>
+                    <button type="button" data-bs-target="#navCarousel" data-bs-slide-to="2" aria-label="Våre Tjenester"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active top-carousel-item">
+                        <div class="homeCarouselImage">
+                            <img src="assets/frames-for-your-heart-VoI2jd75M6Q-unsplash.jpg" style="object-fit:cover;">
+                        </div>
+                        
+                            <div class="carousel-caption">
+                                <p><a class="btn btn-lg btn-primary" style="width:50%;" href="/references.html">Prosjekter</a></p>
+                            </div>
+                        
+                    </div>
+                    <div class="carousel-item top-carousel-item">
+                        <div class="homeCarouselImage">
+                            <img src="assets/ian-dooley-DJ7bWa-Gwks-unsplash.jpg" style="object-fit:cover;">
+                        </div>
+                        <div class="carousel-caption carousel-caption-OmKonstruksjonsteknikk" style="color:rgb(90, 90, 90);">
+                            <p><a class="btn btn-lg btn-primary" style="width:50%;" href="/about.html">Om Konstruksjonsteknikk</a></p>
+                        </div>
+                    </div>
+                    <div class="carousel-item top-carousel-item">
+                        <div class="homeCarouselImage">
+                            <img src="assets/danist-soh-8Gg2Ne_uTcM-unsplash.jpg" style="object-fit:cover;">
+                        </div>
+                        <div class="container">
+                            <div class="carousel-caption" style="color:black;">
+                                <p><a class="btn btn-lg btn-primary" style="width:50%;" href="/services">Tjenester</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#navCarousel" data-bs-slide="prev" style="filter:invert(25%) !important;">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#navCarousel" data-bs-slide="next" style="filter: invert(25%) !important;">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <div class="container px-4 py-5" id="hanging-icons">
+                <h2 class="pb-2 border-bottom">Fagfelt</h2>
+                <div class="row g-4 py-5 row-cols-1 row-cols-md-2">
+                    <div class="col d-flex align-items-start hanging-icons-items">
+                        <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                            <svg class="bi" width="1em" height="1em">
+                                <use xlink:href="assets\geotechnics.svg"></use>
+                            </svg>
+                          </div>
+                          <div>
+                            <button class="btn-unstyled" onclick="window.location.href='/services.html#prosjektering'">Nybygg</button>
+                            <p>Vi har vært ansvarlig for mange nybygg i Bergensområdet. Trykk på knappen for mer info om våre tjenester.</p>
+                          </div>
+                    </div>
+                    <div class="col d-flex align-items-start hanging-icons-items">
+                        <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                            <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"></use></svg>
+                          </div>
+                          <div>
+                            <button class="fs-2 text-body-emphasis btn-unstyled" onclick="window.location.href='/services.html#nybygg'">Ombygg</button>
+                            <p>Vi har vært ansvarlig for mange ombygginger i Bergensområdet. Trykk på knappen for mer info om våre tjenester.</p>
+                          </div>
+                    </div>
+                     
+                </div>
+            </div>
+
+
+
+            <div class="container" style="display:flex; background-color: aliceblue; padding-left: 0; padding-right: 0">
+            <button class="scroll-left">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </button>
+
+                <div class="scrolling-wrapper">
+                <div class="exampleitem">
+                    <!-- First item -->
+                    
+                    <a href="references/bones-arena.html" style="color:black;">
+                        <h4 class="item-title">Bønes Arena</h4>
+                    </a>
+                    <a href="references/bones-arena.html">
+                        <div class="image-container">
+                            <img class="d-flex w-100" src="assets/Projects/BonesArena.jpg" alt="First slide">
+                        </div>
+                    </a>
+                    <div class="container description-container">
+                        <p class="item-description">Byggherre: Bergen Kommune</p>
+                        <p class="item-description">Arkitekt: Origo Arkitektgruppe AS</p>
+                        <p class="item-description">Størrelse: 22.000 m&#178;</p>
+                    </div>
+                </div>
+                <div class="exampleitem">
+                    <!-- Second item -->
+                    <a href="references/fusa-ungdomsskule.html" style="color:black;">
+                        <h4 class="item-title">Fusa Ungdomsskule</h4>
+                    </a>
+                    <a href="references/fusa-ungdomsskule.html">
+                        <div class="image-container">
+                            <img class="d-flex w-100" src="assets/Projects/Fusa-Ungdomskole-710x302.jpg" alt="Second slide">
+                        </div>
+                    </a>
+                    <div class="container description-container">
+                        <p class="item-description">Byggherre: Fusa Kommune</p>
+                        <p class="item-description">Arkitekt: Link Arkitektur</p>                            
+                        <p class="item-description">Vårt bidrag: Byggteknisk prosjektering</p>
+                    </div>
+                </div>
+                <div class="exampleitem">
+                    <!-- Third item -->
+                    <a href="references/elsesro-brygge.html" style="color:black;">
+                        <h4 class="item-title">Elsesro Brygge</h4>
+                        </a>
+                        <a href="references/elsesro-brygge.html">
+                        <div class="image-container">
+                            <img class="d-flex w-100" src="assets/Projects/Elsesro1.png" alt="Third slide">
+                        </div>
+                        </a>
+                        <div class="container description-container">
+                            <p class="item-description">Byggherre: Profier AS</p>
+                            <p class="item-description">Arkitekt: Link Arkitektur</p>
+                            <p class="item-description">Vårt bidrag: Byggteknisk prosjektering</p>
+                        </div>
+                </div>
+                <div class="exampleitem">
+                    <!-- Fourth item -->
+                    <a href="references/nesttunhagen.html" style="color:black;">
+                        <h4 class="item-title">Nesttunhagen</h4>
+                        </a>
+                        <a href="references/nesttunhagen.html">
+                        <div class="image-container">
+                            <img class="d-flex w-100" src="assets/Projects/Nesttunhagen.jpg" alt="First slide">
+                        </div>
+                        </a>
+                        <div class="description-container">
+                            <p class="item-description">Byggherre: Stoltz Bygg AS</p>
+                            <p class="item-description">Arkitekt: Rambøll Norge AS</p>
+                            <p class="item-description">Størrelse: 2.500 m&#178; / 19 leiligheter</p>
+                        </div>
+                </div>
+                <div class="exampleitem">
+                    <!-- Fifth item -->
+                    <a href="references/bergen-stasjon-ost.html" style="color:black;">
+                        <h4 class="item-title">Bergen Stasjon Øst</h4>
+                        </a>
+                        <a href="references/bergen-stasjon-ost.html">
+                        <div class="image-container">
+                            <img class="d-flex w-100" src="assets/Projects/BergenStasjonØst-710x290.jpg" alt="Second slide">
+                        </div>
+                        </a>
+                        <div class="description-container">
+                            <p class="item-description">Byggherre: ROM Eiendom</p>
+                            <p class="item-description">Arkitekt: Lund & Slaatto Arkitekter AS</p>
+                            <p class="item-description">Størrelse: 15.000 m&#178;</p>
+                        </div>
+                </div>
+                <div class="exampleitem">
+                    <!-- Sixth item -->
+                    <a href="references/hardangerfjord-hotell.html" style="color:black;">
+                        <h4 class="item-title">Hardangerfjord Hotel</h4>
+                        </a>
+                        <a href="references/hardangerfjord-hotell.html">
+                        <div class="image-container">
+                            <img class="d-flex w-100" src="assets/Projects/Hardangerfjord-Hotel1-710x474.jpg" alt="Third slide">
+                        </div>
+                        </a>
+                        <div class="description-container">
+                            <p class="item-description">Byggherre: Hardangerfjord Eiendom</p>
+                            <p class="item-description">Arkitekt: Link Arkitektur</p>
+                            <p class="item-description">Størrelse: 11.000m&#178; | Rehab: 4.000m&#178;</p>
+                        </div>
+                </div>
+                <div class="exampleitem">
+                    <!-- Seventh item -->
+                    <a href="references/kanalveien11.html" style="color:black;">
+                        <h4 class="item-title">Kanalveien 11</h4>
+                        </a>
+                        <a href="references/kanalveien11.html">
+                        <div class="image-container">
+                            <img class="d-flex w-100" src="assets/Projects/bp1913-kanalv-11.jpg" alt="Third slide">
+                        </div>
+                        </a>
+                        <div class="container description-container">
+                            <p class="item-description">Byggherre: Rasmussen Eiendom AS</p>
+                            <p class="item-description">Arkitekt: Og Arkitekter AS</p>
+                            <p class="item-description">Størrelse: 8.500m&#178;</p>
+                        </div>
+                </div>
+                <div class="exampleitem">
+                    <!-- Eighth item -->
+                    <a href="references/nygardsgaten-91-93.html" style="color:black;">
+                        <h4 class="item-title" style="margin-right: 50px;">Nygårdsgaten</h4>
+                        </a>
+                        <a href="references/nygardsgaten-91-93.html">
+                        <div class="image-container">
+                            <img class="d-flex w-100" src="assets/Projects/Nygardsgaten-91_93-3.jpg" alt="Third slide">
+                        </div>
+                        </a>
+                        <div class="container description-container">
+                            <p class="item-description">Byggherre: Entra</p>
+                            <p class="item-description">Arkitekt: Link Arkitektur</p>
+                            <p class="item-description">Størrelse: 12.000m&#178;</p>
+                        </div>
+                </div>
+                <div class="exampleitem">
+                    <!-- Nineth item -->
+                    <a href="references/kanalveien11.html" style="color:black;">
+                        <h4 class="item-title">Hotell Neptun</h4>
+                        </a>
+                        <a href="references/hotell-neptun.html">
+                        <div class="image-container">
+                            <img class="d-flex w-100" src="assets/Projects/neptunHotell1-640x427.jpg" alt="Third slide">
+                        </div>
+                        </a>
+                        <div class="container description-container">
+                            <p class="item-description">Byggherre: Scandic Hotel AS</p>
+                            <p class="item-description">Arkitekt: Arkitektkontoret Waage AS</p>
+                            <p class="item-description">Størrelse: 4.830m&#178;</p>
+                        </div>
+                </div>
+                <div class="exampleitem">
+                    <!-- Tenth item -->
+                    <a href="references/stabburveien14.html" style="color:black;">
+                        <h4 class="item-title">Stabburveien</h4>
+                        </a>
+                        <a href="references/stabburveien14.html">
+                        <div class="image-container">
+                            <img class="d-flex w-100" src="assets/Projects/Stabburveien-14-710x338.png" alt="Third slide">
+                        </div>
+                        </a>
+                        <div class="container description-container">
+                            <p class="item-description">Byggherre: Backer Bolig AS</p>
+                            <p class="item-description">Arkitekt: Faaland arkitekter</p>
+                            <p class="item-description">Størrelse: 2.800m&#178;</p>
+                        </div>
+                </div>
+                <div class="exampleitem">
+                    <!-- Eleventh item -->
+                    <a href="references/kanalveien11.html" style="color:black;">
+                        <h4 class="item-title" style="margin-right:50px;">Baneveien 16</h4>
+                        </a>
+                        <a href="references/baneveien-16.html">
+                        <div class="image-container">
+                            <img class="d-flex w-100" src="assets/Projects/Baneveien-16.jpg" alt="Third slide">
+                        </div>
+                        </a>
+                        <div class="container description-container">
+                            <p class="item-description">Byggherre: LAB Eiendom</p>
+                            <p class="item-description">Arkitekt: Nordic</p>
+                            <p class="item-description">Størrelse: 6.000m&#178;</p>
+                        </div>
+                </div>
+                <div class="exampleitem">
+                    <!-- Twelfth item -->
+                    <a href="references/kanalveien11.html" style="color:black;">
+                        <h4 class="item-title">Krohnåstoppen</h4>
+                        </a>
+                        <a href="references/krohnastoppen.html">
+                        <div class="image-container">
+                            <img class="d-flex w-100" src="assets/Projects/Krohnåstoppen-1.jpeg" alt="Third slide">
+                        </div>
+                        </a>
+                        <div class="container description-container">
+                            <p class="item-description">Byggherre: Bergen Kommune</p>
+                            <p class="item-description">Arkitekt: TAG Arkitekter</p>
+                            <p class="item-description">Størrelse: 2.200m&#178;</p>
+                        </div>
+                </div>
+                </div>
+                <button class="scroll-right">
+                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                </button>
+            </div>
+            <br>
+            </div>
+
+        
+        </main>
+
+
+
+        <div class="footer-container">
+        <footer class="footer">
+            <div class="footer-column">
+                <h3><b><u>Kontakt</u></b></h3>
+                <p>Adr: Kanalveien 52C</p>
+                <p>Tlf: +47 99 60 32 86</p>
+                <p>
+                    <span>E-post: </span>
+                    <a href="mailto:post@kontek.no">post@kontek.no</a>
+                </p>
+            </div>
+        </footer>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        <script src="main.js" defer></script>
+    </body>
+</html>

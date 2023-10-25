@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Referanser • Konstruksjonsteknikk</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="nav-container">
+        <nav class="navbar navbar-expand-md navbar-light sticky" id="navbar">
+            <div class="container-custom">
+                <a class="navbar-brand" href="/">
+                    <img src="assets\kontek-logo.png" alt="" width="100%" height="auto">
+                </a>
+                <div class="navbar-toggler" id="navbarToggler">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="button-container">
+                    <ul class="navbar-nav me-auto mb-0 mb-lg-0 pl-2 ms-auto nav-pills nav-fill">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Hjem</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/services.html">Våre tjenester</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active-nav-item" id="activeNavbar" aria-current="page" href="/references.html"><b>Referanser</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about.html">Om Konstruksjonsteknikk</a>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+        <main>
+            <div class="container body-container">
+            <div class="col-lg-12 col-md-12 col-sm-12" id="galleryContainer">
+                <div class="filters-container" style="margin-top:50px; margin-bottom:20px;">
+                    <div id="tagFilterContainer" id="tagFilterContainer">
+                        <button class="btn filter-btn showAll activeTag" onclick="filterGallery('all', this)">Vis alle</button>
+                        <button class="btn filter-btn" onclick="filterGallery('bolig', this)">Boligbygg</button>
+                        <button class="btn filter-btn" onclick="filterGallery('ny', this)">Nybygg</button>
+                        <button class="btn filter-btn" onclick="filterGallery('om', this)">Ombygging</button>
+                        <button class="btn filter-btn" onclick="filterGallery('naering', this)">Næringsbygg</button>
+                        <button class="btn filter-btn" onclick="filterGallery('undervisning', this)">Undervisningsbygg</button>
+                        <button class="btn filter-btn" onclick="filterGallery('diverse', this)">Diverse</button>
+                    </div>
+                    <div class="sizeFilterContainer" id="sizeFilterContainer">
+                        <button class="btn filter-btn showAll activeRange" onclick="filterGallerySize('all', this)">Vis alle</button>
+                        <button class="btn filter-btn" onclick="filterGallerySize('0-1000', this)">0-1000 m&#178;</button>
+                        <button class="btn filter-btn" onclick="filterGallerySize('1000-5000', this)">1000-5000 m&#178;</button>
+                        <button class="btn filter-btn" onclick="filterGallerySize('5000-110000', this)">5000-10 000 m&#178;</button>
+                        <button class="btn filter-btn" onclick="filterGallerySize('10000-20000', this)">10 000-20 000 m&#178;</button>
+                        <button class="btn filter-btn" onclick="filterGallerySize('20000-9999999', this)">20 000+ m&#178;</button>
+                    </div>
+                </div>
+                <div class="row" id="galleryRow">
+                    <div class="col-sm-3 gallery bolig ny naering" data-size="19000">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/frekhaugTorg.html"><img src="" alt="Frekhaug Torg" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/Frekhaug Torg"><h5>Frekhaug Torg</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('bolig', this)">Boligbygg</a>,
+                                    <a class="tag" href="#" onclick="filterGallery('naering', this)">Næringsbygg</a>,
+                                    <a class="tag" href="#" onclick="filterGallery('ny', this)">Nybygg</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery ny bolig" data-size="19000">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/krohnastoppen.html"><img src="assets/Projects/Krohnåstoppen-1.jpeg" alt="Krohnåstoppen" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/krohnastoppen.html"><h5>Krohnåstoppen</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('bolig', this)">Boligbygg</a>,
+                                    <a class="tag" href="#" onclick="filterGallery('ny', this)">Nybygg</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery ny bolig" data-size="5000">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/krakehaugen.html"><img src="assets/Projects/Krakehaugen-1.jpg" alt="Krakehaugen" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/krakehaugen.html"><h5>Kråkehaugen</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('bolig', this)">Boligbygg</a>,
+                                    <a class="tag" href="#" onclick="filterGallery('ny', this)">Nybygg</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery ny naering" data-size="1900">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/bekkjarvik-hotell.html"><img src="assets/Projects/Bekkjarvik.jpg" alt="Bekkjarvik" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/bekkjarvik-hotell.html"><h5>Bekkjarvik Hotell</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('naering', this)">Næringsbygg</a>,
+                                    <a class="tag" href="#" onclick="filterGallery('ny', this)">Nybygg</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery om naering" data-size="6000">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/baneveien-16.html"><img src="assets/Projects/Baneveien-16.jpg" alt="Baneveien 16" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/baneveien-16.html"><h5>Baneveien 16</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('naering', this)">Næringsbygg</a>,
+                                    <a class="tag" href="#" onclick="filterGallery('om', this)">Ombygging</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery bolig ny" data-size="800">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/softeland-bofellesskap.html"><img src="" alt="Søfteland Bofellesskap" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/softeland-bofellesskap.html"><h5>Søfteland Bofellesskap</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('bolig', this)">Boligbygg</a>,
+                                    <a class="tag" href="#" onclick="filterGallery('ny', this)">Nybygg</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery naering ny bolig" data-size="19000">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/kronstad-x.html"><img src="" alt="Kronstad X" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/kronstad-x.html"><h5>Kronstad X</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('naering', this)">Næringsbygg</a>,
+                                    <a class="tag" href="#" onclick="filterGallery('bolig', this)">Boligbygg</a>,
+                                    <a class="tag" href="#" onclick="filterGallery('ny', this)">Nybygg</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery naering undervisning om" data-size="18300">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/landaassvingen-15.html"><img src="assets/Projects/Landassvingen15-1.jpg" alt="Landåssvingen 15" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/landaassvingen-15.html"><h5>Landåssvingen 15</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('naering', this)">Næringsbygg</a>,
+                                    <a class="tag" href="#" onclick="filterGallery('undervisning', this)">Undervisningsbygg</a>,
+                                    <a class="tag" href="#" onclick="filterGallery('om', this)">Ombygg</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery mangler" data-size="14400">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/ncc-kokstad.html"><img src="assets/Projects/ncc-kokstad-1.jpeg" alt="NCC Kokstad" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/ncc-kokstad.html"><h5>NCC Kokstad</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('mangler', this)">MANGLER DATA</a>,
+                                    <a class="tag" href="#" onclick="filterGallery('mangler', this)">MANGLER DATA</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery naering ny" data-size="14400">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/nygardsgaten-91-93.html"><img src="assets/Projects/Nygardsgaten-91_93-3.jpg" alt="Nygårdsgaten 91-93" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/nygardsgaten-91-93.html"><h5>Nygårdsgaten 91-93</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('naering', this)">Næringsbygg</a>,
+                                    <a class="tag" href="#" onclick="filterGallery('ny', this)">Nybygg</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery bolig ny" data-size="1900">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/hagerupsvei.html"><img src="" alt="Hagerupsvei" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/hagerupsvei.html"><h5>Hagerupsvei</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('bolig', this)">Boligbygg</a>,
+                                    <a class="tag" href="#" onclick="filterGallery('ny', this)">Nybygg</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery naering ny" data-size="10">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/nøstegaten-58.html"><img src="assets/Projects/Nøstegaten58Staltrapp-1.jpeg" alt="Nøstegaten Ståltrapp" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/nøstegaten-58.html"><h5>Nøstegaten Ståltrapp</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('naering', this)">Næringsbygg</a>,
+                                    <a class="tag" href="#" onclick="filterGallery('ny', this)">Nybygg</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery mangler" data-size="MANGLER DATA">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/rosendalstunet.html"><img src="assets/Projects/rosendalstunet-2.jpeg" alt="Rosendalstunet" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/rosendalstunet.html"><h5>Rosendalstunet</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('mangler', this)">MANGLER DATA</a>,
+                                    <a class="tag" href="#" onclick="filterGallery('mangler', this)">MANGLER DATA</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery bolig ny naering" data-size="9500">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/erleveien.html"><img src="assets/Projects/erleveien-1.png" alt="Erleveien" class="img-fluid" style="object-fit: revert;"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/erleveien.html"><h5>Erleveien 20</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('bolig', this)">Boligbygg</a>,
+                                    <a class="tag" href="#" onclick="filterGallery('ny', this)">Nybygg</a>,
+                                    <a class="tag" href="#" onclick="filterGallery('naering', this)">Næringsbygg</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery naering mangler" data-size="9500">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/brannstasjon-flesland.html"><img src="assets/Projects/brannstasjonFlesland-1.jpeg" alt="Brannstasjon Flesland" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/brannstasjon-flesland.html"><h5>Brannstasjon Flesland</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('mangler', this)">Ny eller Gammel</a>,
+                                    <a class="tag" href="#" onclick="filterGallery('naering', this)">Næringsbygg</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery bolig ny" data-size="1300">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/bladalen.html"><img src="" alt="Blådalen" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/brannstasjon-flesland.html"><h5>Blådalen</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('bolig', this)">Boligbygg</a>,
+                                    <a class="tag" href="#" onclick="filterGallery('ny', this)">Nybygg</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery bolig ny" data-size="14400">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/sandslikollen.html"><img src="assets/Projects/sandslikollen-1.jpeg" alt="Sandslikollen" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/sandslikollen.html"><h5>Sandslikollen</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('bolig', this)">Boligbygg</a>,
+                                    <a class="tag" href="#" onclick="filterGallery('ny', this)">Nybygg</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="col-sm-3 gallery diverse ny" data-size="350">
+                            <div class="galleryElement">
+                                <div class="imageWrapper">
+                                    <p><a href="/references/trafostasjon-roldal.html"><img src="" alt="Trafostasjon Røldal" class="img-fluid"></a></p>
+                                </div>
+                                <div class="galleryElementInfo">
+                                    <a href="/references/trafostasjon-roldal.html"><h5>Trafostasjon Røldal</h5></a>
+                                    <span class="tags">
+                                        <a>Tags: </a>
+                                        <a class="tag" href="#" onclick="filterGallery('diverse', this)">Diverse</a>,
+                                        <a class="tag" href="#" onclick="filterGallery('ny', this)">Nybygg</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 gallery diverse ny" data-size="8000">
+                            <div class="galleryElement">
+                                <div class="imageWrapper">
+                                    <p><a href="/references/giskavollen-parkering.html"><img src="" alt="Giskavollen Parkering" class="img-fluid"></a></p>
+                                </div>
+                                <div class="galleryElementInfo">
+                                    <a href="/references/giskavollen-parkering.html"><h5>Giskavollen Parkering</h5></a>
+                                    <span class="tags">
+                                        <a>Tags: </a>
+                                        <a class="tag" href="#" onclick="filterGallery('diverse', this)">Diverse</a>,
+                                        <a class="tag" href="#" onclick="filterGallery('ny', this)">Nybygg</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="col-sm-3 gallery naering om" data-size="15000">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/hardangerfjord-hotell.html"><img src="assets/Projects/Hardangerfjord-Hotel1-710x474.jpg" alt="Hardangerfjord Hotel" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/hardangerfjord-hotell.html"><h5>Hardangerfjord Hotel</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('naering', this)">Næringsbygg</a>,
+                                    <a class="tag" href="#" onclick="filterGallery('om', this)">Ombygging</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery undervisning ny" data-size="MANGLER DATA">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/fusa-ungdomsskule.html"><img src="assets/Projects/Fusa-Ungdomskole-710x302.jpg" alt="Fusa Ungdomskule" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/fusa-ungdomsskule.html"><h5>Fusa Ungdomsskule</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('undervisning', this)">Undervisningsbygg</a>,
+                                    <a class="tag" href="#" onclick="filterGallery('ny', this)">Nybygg</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery bolig ny" data-size="11000">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/elsesro-brygge.html"><img src="assets/Projects/Elsesro1.png" alt="Elsesro Brygge" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/elsesro-brygge.html"><h5>Elsesro Brygge</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('bolig', this)">Boligbygg</a>,
+                                    <a class="tag" href="#" onclick="filterGallery('ny', this)">Nybygg</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery naering om" data-size="50000">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/lagunen-storsenter.html"><img src="assets/Projects/Lagunen1-710x278.png" alt="Utvidelse Lagunen Storsenter" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/lagunen-storsenter.html"><h5>Utvidelse Lagunen Storsenter</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('naering', this)">Næringsbygg</a>,
+                                    <a class="tag" href="#" onclick="filterGallery('om', this)">Ombygging</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery undervisning" data-size="6400">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/damsgard-skole.html"><img src="assets/Projects/DamsgardSkole1-710x473.jpg" alt="Damsgård Skole" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/damsgard-skole.html"><h5>Damsgård Skole</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('undervisning', this)">Undervisningsbygg</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery naering ny" data-size="6000">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/norsk-gjenvinning-knarrevik.html"><img src="assets/Projects/Norsk-Gjennvinning-Knarrevik-Forfra-710x400.jpg" alt="Norsk Gjenvinning Knarevik" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/norsk-gjenvinning-knarrevik.html"><h5>Norsk Gjenvinning Knarrevik</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('naering', this)">Næringsbygg</a>,
+                                    <a class="tag" href="#" onclick="filterGallery('ny', this)">Nybygg</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery naering om" data-size="8000">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/hotell-zander-k.html"><img src="assets/Projects/Zander-K1-710x319.jpg" alt="Hotell Zander K" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/hotell-zander-k.html"><h5>Hotell Zander K</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('naering', this)">Næringsbygg</a>,
+                                    <a class="tag" href="#" onclick="filterGallery('om', this)">Ombygging</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery naering ny" data-size="15000">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/bergen-stasjon-ost.html"><img src="assets/Projects/BergenStasjonØst-710x290.jpg" alt="Bergen Stasjon Øst" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/bergen-stasjon-ost.html"><h5>Bergen Stasjon Øst</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('naering', this)">Næringsbygg</a>
+                                    <a class="tag" href="#" onclick="filterGallery('ny', this)">Nybygg</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery undervisning ny" data-size="2200">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/bones-arena.html"><img src="assets/Projects/BonesArena.jpg" alt="Bønes Flerbrukshall" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/bones-arena.html"><h5>Bønes Arena</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('undervisning', this)">Undervisningsbygg</a>,
+                                    <a class="tag" href="#" onclick="filterGallery('ny', this)">Nybygg</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery om naering" data-size="20000">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/gamle-ikea.html"><img src="assets/Projects/Gamle-Ikea2-710x359.png" alt="Gamle Ikea" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/gamle-ikea.html"><h5>Ombygging Gamle Ikea</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('om', this)">Ombygging</a>,
+                                    <a class="tag" href="#" onclick="filterGallery('naering', this)">Næringsbygg</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery naering ny" data-size="5000">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/wema.html"><img src="assets/Projects/wema1.jpg" alt="Wema" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/wema.html"><h5>Wema</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('naering', this)">Næringsbygg</a>
+                                    <a class="tag" href="#" onclick="filterGallery('ny', this)">Nybygg</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery diverse" data-size="18000">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/lagunen-p-hus.html"><img src="assets/Projects/Lagunen-p-hus2-710x342.png" alt="Lagunen P-hus" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/lagunen-p-hus.html"><h5>Lagunen P-hus</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('diverse', this)">Diverse</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery naering ny" data-size="26000">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/knp-kokstadflaten35.html"><img src="assets/Projects/KNP-Kokstadflaten1-710x473.jpg" alt="KNP - Kokstadflaten" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/knp-kokstadflaten35.html"><h5>KNP - Kokstadflaten 35</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('naering', this)">Næringsbygg</a>
+                                    <a class="tag" href="#" onclick="filterGallery('ny', this)">Nybygg</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery naering ny" data-size="8500">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/kanalveien11.html"><img src="assets/Projects/bp1913-kanalv-11.jpg" alt="Kanalveien" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/kanalveien11.html"><h5>Kanalveien 11</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('naering', this)">Næringsbygg</a>
+                                    <a class="tag" href="#" onclick="filterGallery('ny', this)">Nybygg</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery bolig ny" data-size="12500">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/mollendalsveien68.html"><img src="assets/Projects/Møllendalsveien68-Front-710x391.png" alt="Møllendalsveien" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/mollendalsveien68.html"><h5>Møllendalsveien 68</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('bolig', this)">Boligbygg</a>,
+                                    <a class="tag" href="#" onclick="filterGallery('ny', this)">Nybygg</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery bolig ny" data-size="1313">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/lille-nestunvann.html"><img src="assets/Projects/lille-nesttunvann-3.jpeg" alt="Lille Nesttunvann" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/lille-nestunvann.html"><h5>Lille Nesttunvann</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('bolig', this)">Boligbygg</a>
+                                    <a class="tag" href="#" onclick="filterGallery('ny', this)">Nybygg</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery bolig ny" data-size="2200">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/stabburveien14.html"><img src="assets/Projects/Stabburveien-14-710x338.png" alt="Stabburveien 14" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/stabburveien14.html"><h5>Stabburveien 14</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('bolig', this)">Boligbygg</a>
+                                    <a class="tag" href="#" onclick="filterGallery('ny', this)">Nybygg</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery om naering" data-size="4830">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/hotell-neptun.html"><img src="assets/Projects/neptunHotell1-640x427.jpg" alt="Hotell Neptun" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/hotell-neptun.html"><h5>Hotell Neptun</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('om', this)">Ombygging</a>
+                                    <a class="tag" href="#" onclick="filterGallery('naering', this)">Næringsbygg</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery ny undervisning" data-size="1440">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/sandslimarka-barnehage.html"><img src="assets/Projects/sandslimarka-barnehage1.jpg" alt="Sandslimarka Barnehage" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/sandslimarka-barnehage.html"><h5>Sandslimarka Barnehage</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('undervisning', this)">Undervisningsbygg</a>,
+                                    <a class="tag" href="#" onclick="filterGallery('ny', this)">Nybygg</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery ny bolig" data-size="2500">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/nesttunhagen.html"><img src="assets/Projects/Nesttunhagen.jpg" alt="Nesttunhagen" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/nesttunhagen.html"><h5>Nesttunhagen</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('bolig', this)">Boligbygg</a>,
+                                    <a class="tag" href="#" onclick="filterGallery('ny', this)">Nybygg</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery ny bolig" data-size="MANGLER DATA">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/villaS.html"><img src="assets/Projects/villaS-4.jpeg" alt="Villa S" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/villaS.html"><h5>Villa S</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('bolig', this)">Boligbygg</a>,
+                                    <a class="tag" href="#" onclick="filterGallery('ny', this)">Nybygg</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery ny bolig" data-size="200">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/villa-helland.html"><img src="assets/Projects/villa-helland.jpeg" alt="Villa Helland" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/villa-helland.html"><h5>Villa Helland</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('bolig', this)">Boligbygg</a>,
+                                    <a class="tag" href="#" onclick="filterGallery('ny', this)">Nybygg</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery ny bolig" data-size="250">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/villa-bjorkelangen.html"><img src="assets/Projects/villa-bjørkelangen.jpeg" alt="Villa Bjørkelangen" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/villa-bjorkelangen.html"><h5>Villa Bjørkelangen</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('bolig', this)">Boligbygg</a>,
+                                    <a class="tag" href="#" onclick="filterGallery('ny', this)">Nybygg</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery ny bolig" data-size="300">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/villa-rosendal.html"><img src="assets/Projects/villa-rosendal.jpeg" alt="Villa Rosendal" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/villa-rosendal.html"><h5>Villa i Rosendal</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('bolig', this)">Boligbygg</a>,
+                                    <a class="tag" href="#" onclick="filterGallery('ny', this)">Nybygg</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery bolig" data-size="9000">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/nattland-b17.html"><img src="assets/Projects/Nattland-B17.jpg" alt="Nattland B17" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/nattland-b17.html"><h5>Nattland B17</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('bolig', this)">Boligbygg</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery undervisning ny" data-size="15000">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/odontologiske-fakultet.html"><img src="assets/Projects/Odontologiske-Fakultet_Thumb.jpg" alt="Det Odoontologiske Fakultet" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/odontologiske-fakultet.html"><h5>Det Odontologiske Fakultet</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('undervisning', this)">Undervisningsbygg</a>,
+                                    <a class="tag" href="#" onclick="filterGallery('ny', this)">Nybygg</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 gallery bolig naering" data-size="3000">
+                        <div class="galleryElement">
+                            <div class="imageWrapper">
+                                <p><a href="/references/movik.html"><img src="assets/Projects/Movik1-710x255.gif" alt="Møvik" class="img-fluid"></a></p>
+                            </div>
+                            <div class="galleryElementInfo">
+                                <a href="/references/prosjekt4"><h5>Møvik</h5></a>
+                                <span class="tags">
+                                    <a>Tags: </a>
+                                    <a class="tag" href="#" onclick="filterGallery('bolig', this)">Boligbygg</a>,
+                                    <a class="tag" href="#" onclick="filterGallery('naering', this)">Næringsbygg</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </main>
+
+        <div class="footer-container">
+        <footer class="footer">
+            <div class="footer-column">
+                <h3><b><u>Kontakt</u></b></h3>
+                <p>Adr: Kanalveien 52C</p>
+                <p>Tlf: +47 99 60 32 86</p>
+                <p>
+                    <span>E-post: </span>
+                    <a href="mailto:post@kontek.no">post@kontek.no</a>
+                </p>
+            </div>
+        </footer>
+        </div>
+        
+
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        <script src="main.js" defer></script>
+    </body>
+</html>

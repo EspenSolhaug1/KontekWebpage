@@ -1,0 +1,668 @@
+html {
+    height: 100%;
+}
+
+#navbar {
+    box-sizing: border-box;
+    border-bottom-width: 5px;
+    background-color: #dcedf5;
+    border-bottom-style: double;
+    border-color: #8fb0ca;
+    z-index: 500;
+    position: fixed;
+    width: 100%;
+}
+
+.navbar-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.navbar-brand img {
+    width: 350px;
+    height: auto;
+}
+
+#navbar li {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 0px;
+    text-decoration: none;
+}
+#navbarSupportedContent {
+    font-size: 1.1rem;
+    margin-left: auto;
+}
+
+#navbarToggler {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    #navbarToggler {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 50%;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+.active-nav-item {
+    background-color: #0d6efd !important;
+    color: white !important;
+}
+
+.navbar-nav {
+    display: flex;
+    margin-top: 0px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    border-bottom: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #8fb0ca;
+}
+
+#dropdownMenu {
+    width: 100%;
+    box-shadow: 10px 10px 15px 2px #30464d82;
+}
+
+.navbar-toggler {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+}
+
+.navbar-collapse {
+    overflow: visible;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #dcedf5;
+}
+
+.nav ul li {
+    display: block;
+}
+
+.btn.btn-primary {
+    width: 100%;
+}
+
+
+
+.dropdown-menu-hidden {
+    display: none;
+}
+
+
+.dropdown-menu {
+    z-index: 999;
+    white-space: normal !important;
+}
+
+.dropdownElements {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 100%;
+}
+.dropdown-item {
+    display: flex;
+    justify-content: left;
+}
+
+@media (max-width: 575.98px) {
+    .navbar-collapse {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
+  
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.button-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 768px) and (max-width: 1500px) {
+    .button-container {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1501px) {
+    .button-container {
+        width: 100%;
+        max-width: 1500px;
+    }
+  }
+  
+
+.container {
+    max-width: 1500px !important;
+}
+
+
+body {
+    font-family: 'Open sans', sans-serif;
+    min-width: 300px;
+    min-height: 100%;
+    position: relative;
+    background-color: rgb(245, 245, 245);
+    /* margin-bottom: 142px; */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    align-self: center;
+}
+
+.body-container {
+    background-color: rgb(240, 240, 240);
+    height: calc(100% - 200px);
+    flex-grow: 1;
+}
+.content-container {
+    width: 100%;
+    margin: 0 auto;
+}
+.container-custom {
+    max-width: 90%; /* default to 90% of screen width */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+
+
+/* Karusell Home */
+
+.carousel {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.top-carousel-item {
+    color:white !important;
+    background-color: #000000;
+    height: 30rem;
+}
+
+.carousel-caption p a {
+    margin-bottom: 1.2rem;
+    font-size: 1.15rem;
+    line-height: 1.3;
+}
+
+@media (max-width: 40em) {
+.carousel-caption-OmKonstruksjonsteknikk p a {
+    margin-bottom: 1.2rem;
+    font-size: 0.9rem;
+    line-height: 1.3;
+}
+}
+
+@media (max-width: 31em) {
+    .carousel-caption-OmKonstruksjonsteknikk p a {
+        margin-bottom: 1.2rem;
+        font-size: 0.7rem;
+        line-height: 1.3;
+    }
+    }
+
+@media (max-width: 25em) {
+    .carousel-caption-OmKonstruksjonsteknikk p a {
+        margin-bottom: 1.2rem;
+        font-size: 0.6rem;
+        line-height: 1.3;
+    }
+    }    
+
+.homeCarouselImage > img {
+    width: 100%;
+    height: 500px;
+    object-fit: initial;
+}
+
+
+.carousel-control-prev, .carousel-control-next {
+    width: 10%;
+    filter: invert(100%);
+    /* background-color: rgb(12, 12, 12); */
+}
+
+
+/* Home Project Scroller */
+
+.scrolling-wrapper {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: auto;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    background-color: #f7f7f7 !important;
+    box-shadow: 0px 3px 10px grey;
+  }
+  
+  .exampleitem {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: auto;
+    padding:10px;
+    border: #c2c8cc;
+    border-style: solid;
+    border-width: 1px;
+  }
+  
+  .scrolling-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  .scroll-right, .scroll-left {
+    background-color: #f3f3f3;
+  }
+  .scroll-right {
+    padding-left: 1em;
+    box-shadow: 3px 3px 10px grey;
+  }
+  .scroll-left {
+    padding-right: 1em;
+    box-shadow: -3px 3px 10px grey;
+  }
+.item-title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.exampleitem > a {
+    text-decoration: none;
+}
+.exampleitem > a:hover {
+    text-decoration: underline;
+}
+
+.description-container {
+    margin-top: auto;
+    padding-left: 0px !important;
+    }
+
+.item-description {
+    font-size: small;
+    line-height: 0.7rem;
+}
+/* @media (max-width: 1200px) {
+    .item-description {
+        font-size: small;
+        line-height: 0.5rem;
+    }
+} */
+@media (max-width: 900px) {
+    .item-description {
+        font-size: x-small;
+        line-height: 0.5rem;
+    }
+    .item-title {
+        font-size: medium;
+    }
+}
+
+
+.image-container {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    width:100%;
+    box-shadow: 0px 0px 20px 0px #777777;
+    display: flex;
+    justify-content: center;
+} 
+
+.image-container > img {
+    height: 150px;
+    width: auto;
+    object-fit: cover;
+}
+/* End Home Project Scroller */
+
+.icon-square {
+    width: 3rem;
+    height: 3rem;
+    border-radius: .75rem;
+}
+
+
+
+.btn-unstyled {
+    font-size: x-large !important;
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    text-decoration: solid;
+    color: inherit;
+    text-align: left;
+}
+.btn-unstyled:hover {
+    text-decoration: underline;
+}
+
+.aboutKontek {
+    margin: 10px;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.aboutContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Embeded Google Map */
+
+.google-map {
+    border: 2px solid #999999;
+    padding-bottom: 30%;
+    position: relative;
+}
+@media (max-width: 766px) {
+    .google-map {
+        padding-bottom: 50%;
+    }
+}
+.google-map iframe {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+
+/* END Embeded Google Map */
+
+.employeeGrid {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #d2e2ee;
+    border: 2px solid #222222;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 20px 10px;
+    flex-basis: calc(50% - 20px);
+    justify-content: center;
+    box-shadow: 5px 5px 10px #777777;
+    padding-bottom: 20px;
+}
+
+ @media screen and (min-width: 600px) {
+    .employeeGrid {
+        flex-basis: calc(20% - 20px);
+    }
+ }
+ @media screen and (max-width: 420px) {
+    .employeeGrid {
+        width: 100%;
+        flex-basis: calc(50% - 10px);
+        margin: 2px;
+        border: 1px solid #222222;
+    }
+ }
+
+.employeeGrid img {
+    border-radius: 10%;
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    box-shadow: 4px 5px 10px #777777;
+}
+
+.employeeCollection {
+    margin: 2px;
+    padding-top: 50px;
+    background-color: #fff8de;
+}
+
+.employee-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* Gallery */
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+#galleryRow {
+    width: 100%;
+}
+
+.galleryElement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+}
+
+.imageWrapper {
+    width: 100%;
+    height: 0;
+    margin-top: 3%;
+    padding-bottom: 75%;
+    position: relative;
+}
+
+.imageWrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding:0.05rem;
+    border-radius: 4%;
+    box-shadow: 10px 10px 15px #777777;
+} 
+ 
+.galleryElementInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.galleryElementInfo .tags {
+    font-size: smaller;
+}
+.tags a {
+    text-decoration: none !important;
+    color: currentColor;
+}
+
+.tag:hover {
+    text-decoration: underline !important;
+}
+
+.activeTag {
+    background-color: #0d6efd !important;
+    color: white;
+}
+.activeRange {
+    background-color: #0d6efd !important;
+    color: white;
+}
+
+.filters-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#tagFilterContainer, sizeFilterContainer {
+    margin-bottom: 20px;
+}
+@media screen and (max-width: 400px) {
+    .filter-btn {
+        font-size: small;
+    }
+}
+
+
+button.btn:nth-child(1) {
+    background-color: #c2c8cc;
+}
+
+
+
+/* Project */
+
+.projectCenter {
+    align-items: center;
+}
+
+.slideshow .carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(240, 240, 240);
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    height: 100%;
+    
+}
+
+.slideshow .carousel-item.active {
+    opacity: 1;
+    height: 100%;
+    transition: opacity 0.2s ease-in-out;
+    background-color: rgb(240, 240, 240);
+}
+.slideshow .carousel-item img {
+    max-height: 25rem;
+    max-width: 80%;
+    margin: auto;
+    width: auto !important;
+    box-shadow: 5px 0px 20px #b1b1b1;
+}
+.col-md-4 .card {
+    border:solid;
+    border-style: solid;
+    border-width: 2px;
+}
+#galleryContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.col-md-6 ul {
+    list-style-type: square;
+    padding: 5px 20px;
+}
+
+/* References list */
+
+#prosjektering >.col-md-6 > ul > ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+#prosjektering > .col-md-6 > ul > ul > li::before {
+    content: '▶';
+    position: relative;
+    left: -10px;
+}
+/* END References list */
+
+/* Footer */
+
+.footer-container {
+    padding-right: 0;
+    padding-left: 0;
+    background-color: #dcedf5;
+    border-top: auto;
+    border-top-style: solid;
+    border-color: #b1b1b1;
+    width: 100%;
+}
+
+.footer {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1 0 200px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.footer-column h3 {
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.footer-column a {
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: small;
+    font-weight: lighter;
+}
+
+.footer-column p {
+    font-size: small;
+    margin-bottom: 0.2rem;
+    font-weight: lighter;
+}
+
+.nav-container {
+    background-color: #dcedf5;
+    border-bottom-style: solid;
+    border-color: #b1b1b1;
+    height: 152px;
+    width: 100%;
+}
+
+
+hr.round {
+    border-top: 5px solid #0000;
+    border-radius: 3px;
+}
